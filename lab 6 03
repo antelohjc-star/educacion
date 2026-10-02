@@ -1,0 +1,35 @@
+#include 
+using namespace std;
+
+int main() {
+    int n;
+    int total_digitos = 0;
+    int cantidad_mayores_5 = 0;
+    int suma_mayores_5 = 0;
+    int digito;
+
+    cout << "Ingresa un numero entero positivo N: ";
+    cin >> n;
+
+    // Mientras el numero tenga digitos
+    while (n > 0) {
+        digito = n % 10; // Sacamos el ultimo digito
+
+        total_digitos++; // Contamos el digito procesado
+
+        // Vemos si es mayor a 5
+        if (digito > 5) {
+            cantidad_mayores_5++;
+            suma_mayores_5 = suma_mayores_5 + digito;
+        }
+
+        n = n / 10; // Eliminamos el ultimo digito para la siguiente vuelta
+    }
+
+    // Mostramos lo que pide el problema
+    cout << "Cantidad total de digitos: " << total_digitos << endl;
+    cout << "Cantidad de digitos mayores a 5: " << cantidad_mayores_5 << endl;
+    cout << "Suma de los digitos mayores a 5: " << suma_mayores_5 << endl;
+
+    return 0;
+}
