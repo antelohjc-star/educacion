@@ -1,0 +1,20 @@
+#include 
+using namespace std;
+
+int main() {
+    int n;
+    float suma = 0.0; // Usamos float para los decimales
+
+    cout << "Ingresa un numero entero positivo N: ";
+    cin >> n;
+
+    // Repetimos desde 1 hasta N
+    for (int i = 1; i <= n; i++) {
+        // Ponemos 1.0 para que haga division con decimales y no division entera
+        suma = suma + (1.0 / i); 
+    }
+
+    cout << "La suma de la serie es: " << suma << endl;
+
+    return 0;
+}
