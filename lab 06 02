@@ -1,0 +1,28 @@
+#include 
+using namespace std;
+
+int main() {
+    float combustible = 50.0;
+    float consumido_total = 0.0;
+    float gasto_entrega;
+    int entregas = 0;
+
+    // Mientras quede mas de 10 litros
+    while (combustible > 10.0) {
+        cout << "Cuantos litros gastaste en esta entrega? ";
+        cin >> gasto_entrega;
+
+        combustible = combustible - gasto_entrega;
+        consumido_total = consumido_total + gasto_entrega;
+        entregas++; // Sumamos una entrega mas
+    }
+
+    // Mostramos los resultados finales
+    cout << "\n--- Resumen ---" << endl;
+    cout << "Cantidad de entregas realizadas: " << entregas << endl;
+    cout << "Total de combustible consumido: " << consumido_total << " litros" << endl;
+    cout << "Combustible restante: " << combustible << " litros" << endl;
+    cout << "Mensaje: Debe cargar combustible" << endl;
+
+    return 0;
+}
